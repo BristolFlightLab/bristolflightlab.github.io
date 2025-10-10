@@ -1,0 +1,94 @@
+site_name: 'Bristol Flight Lab docs'
+site_url: https://bristolflightlab.github.io
+theme: 
+  name: material
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  palette:
+    - scheme: flightlab
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: flightlab_dark
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  features:
+  - navigation.tracking
+  - navigation.instant
+  - navigation.search
+  - navigation.search.highlight
+  - navigation.search.suggestions
+  - navigation.search.suggestions.highlight
+  #- navigation.tabs
+  - navigation.sections
+  - navigation.indexes
+  - content.tabs.link
+  - content.code.annotation
+  - content.code.copy
+  - content.code.expand
+  - content.code.highlight
+  - content.code.tabs
+  - content.code.toggle
+  - content.code.wrap
+  - content.code.include
+  - content.code.include.highlight
+  - content.code.include.tabs
+  - content.code.include.toggle
+  - content.code.include.wrap
+  - content.code.include.tabs
+  - navigation.instant.progress
+  - navigation.instant.preview
+  - navigation.footer
+  - search.suggest
+  language: en
+plugins:
+  - search
+  # - awesome-nav
+ # - literate-nav:
+ #      nav_file: index.md
+ #      implicit_index: true
+ # - glightbox
+ # - git-revision-date-localized:
+ #     fallback_to_build_date: true
+ # - gen_nav:
+ #     enabled: true
+markdown_extensions:
+  - codehilite
+  - footnotes
+  - pymdownx.highlight:
+      linenums: true
+      use_pygments: true
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.tabbed
+  - pymdownx.details
+  - pymdownx.tasklist
+  - pymdownx.arithmatex
+  - pymdownx.keys
+  - pymdownx.emoji
+  - pymdownx.mark
+  - pymdownx.caret
+  - pymdownx.tilde
+  - pymdownx.inlinehilite
+  - admonition
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+extra_css:
+  - stylesheets/extra.css
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/BristolFlightLab
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/bristol-flight-lab/
+
+hooks:
+  - hooks.py
