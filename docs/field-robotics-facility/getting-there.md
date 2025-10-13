@@ -11,7 +11,7 @@ Fenswood Farm is in the village of Long Ashton, a short journey from central Bri
 
 **Address: Fenswood Farm, Wild Country Way, Long Ashton BS41 9AG.**
 
-[Google Maps](https://maps.app.goo.gl/1Fm3MfhieBKfhpuk8) / [What3Words](https://w3w.co/appeal.voted.unrealistic)
+Lab entrance: [Google Maps](https://maps.app.goo.gl/MAif7mConQrGM8Gn9) / [What3Words](https://w3w.co/appeal.voted.unrealistic)
 
 ## Transport
 
