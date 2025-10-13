@@ -44,15 +44,11 @@ theme:
   language: en
 plugins:
   - search
-  # - awesome-nav
- # - literate-nav:
- #      nav_file: index.md
- #      implicit_index: true
  # - glightbox
  # - git-revision-date-localized:
  #     fallback_to_build_date: true
- # - gen_nav:
- #     enabled: true
+  - gen_nav:
+      enabled: true
 markdown_extensions:
   - codehilite
   - footnotes
@@ -89,6 +85,3 @@ extra:
       link: https://github.com/BristolFlightLab
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/bristol-flight-lab/
-
-hooks:
-  - hooks.py
