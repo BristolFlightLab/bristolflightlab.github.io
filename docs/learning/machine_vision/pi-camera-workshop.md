@@ -1,12 +1,12 @@
 # Pi 5 Setup Workshop
 
-Hostname: pi5-group1
-Username: pi
-Pwd: flightlab
+* Hostname: pi5-group1
+* Username: pi
+* Pwd: flightlab
 
 ## 1. Flash the SD card
 
-1. Install Raspberry Pi Imager on your laptop: https://www.raspberrypi.com/software/
+1. Install [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on your laptop
 2. Choose **Raspberry Pi 5**, then **Raspberry Pi OS (64-bit)**, then your SD card.
 3. On the customisation screen, set:
    - hostname, username and password (from the table above)
@@ -15,8 +15,8 @@ Pwd: flightlab
    - **Enable SSH** (password authentication is fine for now)
 4. Write the card. You will probably need to reformat the sd card at this step. This will take a few minutes.
 
-While it writes, connect the camera to the Pi. The Pi 5 uses the smaller 22-pin camera connector. Check the ribbon orientation against the guide before you power up, because a ribbon in the wrong way round is the most common reason the camera isn't found:
-https://www.raspberrypi.com/documentation/accessories/camera.html
+While it writes, connect the camera to the Pi. The Pi 5 uses the smaller 22-pin camera connector. Check the ribbon orientation against the guide before you power up, because a ribbon in the wrong way round is the most common reason the camera isn't found. [Camera documentation](https://www.raspberrypi.com/documentation/accessories/camera.html).
+
 
 ## 2. First boot
 
@@ -144,8 +144,8 @@ Wait for the green LED to stop flashing before you pull the power. Pulling the p
 
 ## Links
 
-- Getting started: https://www.raspberrypi.com/documentation/computers/getting-started.html
-- Remote access (SSH, VNC, Connect): https://www.raspberrypi.com/documentation/computers/remote-access.html
-- Camera software: https://www.raspberrypi.com/documentation/computers/camera_software.html
-- Picamera2 manual: https://datasheets.raspberrypi.com/camera/picamera2-manual.pdf
-- Picamera2 examples: https://github.com/raspberrypi/picamera2/tree/main/examples
+- [Getting started](https://www.raspberrypi.com/documentation/computers/getting-started.html)
+- [Remote access (SSH, VNC, Connect)](https://www.raspberrypi.com/documentation/computers/remote-access.html)
+- [Camera software](https://www.raspberrypi.com/documentation/computers/camera_software.html)
+- [Picamera2 manual](https://datasheets.raspberrypi.com/camera/picamera2-manual.pdf)
+- [Picamera2 examples](https://github.com/raspberrypi/picamera2/tree/main/examples)
