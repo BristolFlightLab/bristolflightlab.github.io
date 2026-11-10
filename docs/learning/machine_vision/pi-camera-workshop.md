@@ -9,10 +9,10 @@
 1. Install [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on your laptop
 2. Choose **Raspberry Pi 5**, then **Raspberry Pi OS (64-bit)**, then your SD card.
 3. On the customisation screen, set:
-   - hostname, username and password (from the table above)
-   - Wi-Fi SSID, password and country
-   - locale and timezone
-   - **Enable SSH** (password authentication is fine for now)
+    - hostname, username and password (from the table above)
+    - Wi-Fi SSID, password and country
+    - locale and timezone
+    - **Enable SSH** (password authentication is fine for now)
 4. Write the card. You will probably need to reformat the sd card at this step. This will take a few minutes.
 
 While it writes, connect the camera to the Pi. The Pi 5 uses the smaller 22-pin camera connector. Check the ribbon orientation against the guide before you power up, because a ribbon in the wrong way round is the most common reason the camera isn't found. [Camera documentation](https://www.raspberrypi.com/documentation/accessories/camera.html).
