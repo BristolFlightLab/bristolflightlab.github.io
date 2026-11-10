@@ -1,0 +1,92 @@
+[project]
+site_name = "Bristol Flight Lab docs"
+site_description = "Lab admin documentation and tutorials from Bristol Flight Lab at the University of Bristol."
+site_author = "Bristol Flight Lab, University of Bristol"
+site_url = "https://bristolflightlab.github.io/"
+repo_url = "https://github.com/BristolFlightLab/bristolflightlab.github.io"
+edit_uri = "edit/main/docs/"
+copyright = "Bristol Flight Lab &middot; University of Bristol"
+
+# No nav: Zensical builds it from the docs/ folder, so a new page appears
+# without editing this file (as the MkDocs gen_nav plugin did before).
+
+extra_css = ["stylesheets/flightlab.css"]
+
+[project.extra]
+social = [
+  { icon = "fontawesome/brands/github", link = "https://github.com/BristolFlightLab" },
+  { icon = "fontawesome/brands/linkedin", link = "https://www.linkedin.com/company/bristol-flight-lab/" },
+]
+
+[project.theme]
+language = "en"
+# The Flight Lab theme (BristolFlightLab/flightlab-zensical-theme), as a
+# submodule pinned to a tag; upgrade with `git -C theme checkout vX.Y.Z`.
+# custom_dir resolves against this file's directory and its contents are copied
+# to the site root, so it points at dist/. A file in docs/ wins over the same
+# path in the theme.
+custom_dir = "theme/dist"
+logo = "assets/logo.png"
+favicon = "assets/logo.png"
+features = [
+  "content.action.edit",
+  "content.code.annotate",
+  "content.code.copy",
+  "content.code.select",
+  "content.footnote.tooltips",
+  "content.tabs.link",
+  "content.tooltips",
+  "navigation.footer",
+  "navigation.indexes",
+  "navigation.instant",
+  "navigation.instant.prefetch",
+  "navigation.instant.progress",
+  "navigation.path",
+  "navigation.sections",
+  "navigation.top",
+  "navigation.tracking",
+  "search.highlight",
+  "toc.follow",
+]
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+
+[project.markdown_extensions]
+abbr = {}
+admonition = {}
+attr_list = {}
+def_list = {}
+footnotes = {}
+md_in_html = {}
+tables = {}
+toc.permalink = true
+pymdownx.arithmatex.generic = true
+pymdownx.betterem = {}
+pymdownx.caret = {}
+pymdownx.details = {}
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+pymdownx.highlight.anchor_linenums = true
+pymdownx.highlight.line_spans = "__span"
+pymdownx.highlight.linenums = true
+pymdownx.highlight.pygments_lang_class = true
+pymdownx.inlinehilite = {}
+pymdownx.keys = {}
+pymdownx.mark = {}
+pymdownx.smartsymbols = {}
+pymdownx.snippets = {}
+pymdownx.superfences = {}
+pymdownx.tabbed.alternate_style = true
+pymdownx.tabbed.combine_header_slug = true
+pymdownx.tasklist.custom_checkbox = true
+pymdownx.tilde = {}
