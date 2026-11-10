@@ -33,33 +33,33 @@ Note that the documentation normally lists functions with their C++ syntax, but 
 
 ## Photogramatory
 <!-- this could be an entire page -->
-To make accurate measuremnets, understanding how a 3D point, X in the real world gets projected onto a 2D point, x in the image is essential.
+To make accurate measuremnets, understanding how a 3D point, $X$, in the real world gets projected onto a 2D point, $x$, in the image is essential.
 
 This relationship is described by two key matrices:
 
-1 Intrinsic Matrix (Camera Matrix) K
-2 Extrinsic Matrix (Pose: Rotation + Translation), [R|t]
+1. Intrinsic Matrix (Camera Matrix), $K$
+2. Extrinsic Matrix (Pose: Rotation + Translation), $[R \mid t]$
 
 $$
-x = K [R|t] X
+x = K \, [R \mid t] \, X
 $$
 
 ### Intrinsic Matrix
 The intrinsic matrix encodes the internal parameters of the camera — the characteristics that describe how it forms an image from incoming light. It tells us how 3D points in camera coordinates are projected onto the 2D image plane (pixels).
 
 $$
-K = \
-\begin{array}{}
-fx & 0 & cx\\ 
-0 & fy & cy\\ 
+K =
+\begin{bmatrix}
+f_x & 0 & c_x \\
+0 & f_y & c_y \\
 0 & 0 & 1
-\end{array}
-$$ 
+\end{bmatrix}
+$$
 
 | Symbol       | Meaning                                              |
 | :----------- | :--------------------------------------------------- |
-|  fx, fy      | Focal lengths (in pixels) along x and y axes.        |
-|  cx, cy      | Coordinates of the optical center (principal point). |
+| $f_x$, $f_y$ | Focal lengths (in pixels) along x and y axes.        |
+| $c_x$, $c_y$ | Coordinates of the optical center (principal point). |
 
 Note, that the focal lengths here refer to the pixel scaled focal length.
 
@@ -75,18 +75,18 @@ Note that changing zoom and autofocus setings can change the intirnsic matrix.
 The extrinsic matrix describes the camera’s position and orientation relative to the world (or object) coordinate system. It converts coordinates from world space → camera space.
 
 $$
-R|t = \
-\begin{matrix}{} 
-r_{11} & r_{12} & r_{13} & t_x\\ 
-r_{21} & r_{22} & r_{23} & t_y\\ 
+[R \mid t] =
+\begin{bmatrix}
+r_{11} & r_{12} & r_{13} & t_x \\
+r_{21} & r_{22} & r_{23} & t_y \\
 r_{31} & r_{32} & r_{33} & t_z
-\end{matrix}
-$$ 
+\end{bmatrix}
+$$
 
 
 | Symbol | Meaning                                          |
 | :----- | :----------------------------------------------- |
-| ( R )  | 3×3 rotation matrix (orientation of the camera). |
-| ( t )  | 3×1 translation vector (position of the camera). |
+| $R$    | 3×3 rotation matrix (orientation of the camera). |
+| $t$    | 3×1 translation vector (position of the camera). |
 
 On a drone, these parameters can be calculated using GPS, IMU and altimeters readings. More more precise measurements, a technique called Structure from Motion may be used to calcualte parameters from existing images.
